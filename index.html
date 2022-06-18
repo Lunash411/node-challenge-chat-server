@@ -22,5 +22,19 @@
     </form>
 
     <a href="/messages">See all messages</a>
+    <div id="messages-section">
+
+    </div>
+    <script>
+      setInterval(()=> {
+        fetch('/messages')
+        .then(response => response.json())
+        .then(message => { // messages = [{...}, {...}]
+       const messagesSection = document.getElementById("messages-section");
+       messagesSection.innerText = "";
+       messages.forEach(message => { // {id, from, text}
+      })});
+      })
+    </script>
   </body>
 </html>
